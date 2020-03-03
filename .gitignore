@@ -1,0 +1,6 @@
+hm/*
+.vscode
+*.pyc
+Pipfile
+.env
+venv
