@@ -23,7 +23,7 @@ def get_quiz():
 
 
 def random_name(fname):
-    with open("./used_artist_file.txt", "+a") as used_artist_file:
+    with open("./data/gused_artist_file.txt", "+a") as used_artist_file:
         names = open(fname).read().splitlines()
         used_names = used_artist_file.read().splitlines()
         name = random.choice(names)  
