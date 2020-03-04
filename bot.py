@@ -31,6 +31,6 @@ api = tweepy.API(auth)
 
 while True:
     print("about to get artist...")
-    artist = generate_artist.get_choice()
+    artist = generate_artist.get_tweet()
     api.update_status(artist)
     time.sleep(INTERVAL)
