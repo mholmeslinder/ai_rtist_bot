@@ -4,3 +4,7 @@ hm/*
 Pipfile
 .env
 venv
+
+./bot_ml_repo/bin
+./bot_ml_repo/include
+./bot_ml_repo/lib
