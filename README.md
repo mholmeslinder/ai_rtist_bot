@@ -14,7 +14,14 @@ This readme is a WIP, but in the near future, I'll be posting:
 * the Jupyter notebook with the methodology I used to cull the 'Existing Artists' ['artist_names.txt'](https://github.com/mholmeslinder/ai_rtist_bot/blob/master/data/artist_names.txt) dataset
 * the Colab I used for [GPT-2-simple](https://github.com/minimaxir/gpt-2-simple) to finetune GPT-2 on the 'Existing Artists' dataset and create the ['new_artist_names.txt](https://github.com/mholmeslinder/ai_rtist_bot/blob/master/data/new_artist_names.txt) dataset
 
-## To use:
+## [bot_ml_repo](https://github.com/mholmeslinder/ai_rtist_bot/tree/master/bot_ml_repo)
+This is where the real guts of the project live. First, there's the [dataset](https://github.com/mholmeslinder/ai_rtist_bot/blob/master/bot_ml_repo/new_ai_rtists_dataset.ipynb) notebook, which documents how I used the Last.fm API to create our dataset. 
+
+Then, there's our [GPT-2 Colab notebook](https://github.com/mholmeslinder/ai_rtist_bot/blob/master/bot_ml_repo/new_ai_rtists_GPT_2.ipynb) (make sure to open it in Colab!), which walks through finetuning OpenAI's GPT-2 on the dataset to create our new artists.
+
+Finally, there's our [cleaner](https://github.com/mholmeslinder/ai_rtist_bot/blob/master/bot_ml_repo/cleaner.py), which (really inefficiently) cleans our 'new artist names' and prevents them from containing duplicate items from our original dataset.
+
+## To 'use':
 
 set up your virtualenv with Python 3
 
