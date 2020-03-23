@@ -19,12 +19,7 @@ Finally, there's our [cleaner](https://github.com/mholmeslinder/ai_rtist_bot/blo
 
 ## To 'use':
 
-set up your virtualenv with Python 3
-
-```python
-$ virtualenv -p=(which python3) hm
-$ source hm/bin/activate
-```
+set up your preferred virtualenv with Python 3
 
 install the requirements
 
