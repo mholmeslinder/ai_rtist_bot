@@ -10,18 +10,16 @@ Python program to generate "new" musical artist names.
 
 Drug names based on a finetuning of OpenAI's GPT-2, fed by [a list of the top 10,000ish artists culled from LastFM's API](https://github.com/mholmeslinder/ai_rtist_bot/blob/master/data/artist_names.txt).
 
-This readme is a WIP, but in the near future, I'll be posting:
-* the Jupyter notebook with the methodology I used to cull the 'Existing Artists' ['artist_names.txt'](https://github.com/mholmeslinder/ai_rtist_bot/blob/master/data/artist_names.txt) dataset
-* the Colab I used for [GPT-2-simple](https://github.com/minimaxir/gpt-2-simple) to finetune GPT-2 on the 'Existing Artists' dataset and create the ['new_artist_names.txt](https://github.com/mholmeslinder/ai_rtist_bot/blob/master/data/new_artist_names.txt) dataset
+## [bot_ml_repo](https://github.com/mholmeslinder/ai_rtist_bot/tree/master/bot_ml_repo)
+This is where the real guts of the project live. First, there's the [dataset](https://github.com/mholmeslinder/ai_rtist_bot/blob/master/bot_ml_repo/new_ai_rtists_dataset.ipynb) notebook, which documents how I used the Last.fm API to create our dataset. 
 
-## To use:
+Then, there's our [GPT-2 Colab notebook](https://colab.research.google.com/drive/11nlOtsEuW4T1467OVZGTL2ELCYMmbV3f) (edit: this is a link to the Colab itself, which is a bit more convenient to view than the notebook embedded in this repo), which walks through finetuning OpenAI's GPT-2 on the dataset to create our new artists.
 
-set up your virtualenv with Python 3
+Finally, there's our [cleaner](https://github.com/mholmeslinder/ai_rtist_bot/blob/master/bot_ml_repo/cleaner.py), which (really inefficiently) cleans our 'new artist names' and prevents them from containing duplicate items from our original dataset.
 
-```python
-$ virtualenv -p=(which python3) hm
-$ source hm/bin/activate
-```
+## To 'use':
+
+set up your preferred virtualenv with Python 3
 
 install the requirements
 

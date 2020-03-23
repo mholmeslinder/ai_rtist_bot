@@ -1,7 +1,7 @@
 # generate_artist.py
 import random
 
-artist_names = "./data/artist_names.txt"
+artist_names = "./data/artist_names.txt" # aka "REAL" artist names
 new_artist_names = "./data/new_artist_names.txt"
 
 
@@ -16,7 +16,7 @@ def get_tweet():
 
 # generate a choice between two artists: which one is real?
 def get_choices():
-    # real_artist -get random line from artist_names that's NOT in used_artists
+    # real_artist -get random line from artist_names
     real_artist = random_name(artist_names)
     # fake_artist - same process for new_artist_names
     fake_artist = random_name(new_artist_names)
@@ -26,16 +26,9 @@ def get_choices():
 
 
 def random_name(fname):
-    with open("./data/used_artist_file.txt", "+a") as used_artist_file:
-        names = open(fname).read().splitlines()
-        used_names = used_artist_file.read().splitlines()
-        name = random.choice(names)  
-
-        if name not in used_names:
-            used_artist_file.write(f'{name}\n')
-            return name
-        else:     
-            random_name(fname)
+    names = open(fname, encoding="utf8").read().splitlines()
+    return random.choice(names)  
+     
 
 # for testing
 if __name__ == '__main__':
